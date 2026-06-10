@@ -28,8 +28,8 @@ You need to have Docker and Docker Compose installed on your machine before runn
 
 1. Clone this repository:
 ```bash
-git clone [https://github.com/atobarbosa/network-anomaly-detector.git](https://github.com/atobarbosa/network-anomaly-detector.git)
-cd network-anomaly-detector
+git clone [https://github.com/atobarbosa/group04-BuksanMoPapasukinAko](https://github.com/atobarbosa/group04-BuksanMoPapasukinAko)
+cd buksanmopapasukinako
 
 ```
 
