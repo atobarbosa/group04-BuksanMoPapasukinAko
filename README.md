@@ -43,4 +43,3 @@ docker-compose up --build
 3. Open the web interface:
 Once the containers are running, open your web browser and go to `http://localhost:7860` to access the Gradio upload page.
 
-```
