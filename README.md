@@ -101,8 +101,8 @@ You must have **Docker** and **Docker Compose** installed. You do not need to in
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/atobarbosa/BuksanMoPapasukinAko.git
-cd BuksanMoPapasukinAko
+git clone https://github.com/atobarbosa/group04-BuksanMoPapasukinAko.git
+cd group04-BuksanMoPapasukinAko
 
 # 2. Build and start both containers
 docker compose up --build
