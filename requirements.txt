@@ -1,0 +1,16 @@
+# requirements.txt
+# Install with: uv pip install -r requirements.txt
+# (or plain: pip install -r requirements.txt)
+#
+# Minimum versions instead of exact pins — avoids resolver failures when
+# an exact old version has no prebuilt wheel for your Python version.
+
+pandas>=2.2.0
+pyarrow>=18.0.0
+scikit-learn>=1.5.0
+joblib>=1.4.0
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-multipart>=0.0.18
+gradio>=5.9.0
+requests>=2.32.0
