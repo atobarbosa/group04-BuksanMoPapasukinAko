@@ -17,12 +17,11 @@ app = FastAPI(title="BuksanMoPapasukinAko API")
 # Needed once the Gradio UI and this API run in separate Docker containers
 # (different origins). Locked to localhost/common dev ports for now;
 # tighten this list to your actual frontend origin(s) in production.
+
+allowed_origins = os.getenv("CORS_ORIGINS", "http://127.0.0.1:7860,http://localhost:7860").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://127.0.0.1:7860",
-        "http://localhost:7860",
-    ],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
