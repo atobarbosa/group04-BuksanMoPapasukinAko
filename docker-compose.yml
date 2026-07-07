@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend.Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - CORS_ORIGINS=http://localhost:7860,http://127.0.0.1:7860
+    volumes:
+      # Persistent storage volume for scan history so it isn't wiped on rebuild
+      - ./scan_history.csv:/app/scan_history.csv
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend.Dockerfile
+    ports:
+      - "7860:7860"
+    environment:
+      # Tell the UI to talk to the backend container service name instead of localhost
+      - API_URL=http://backend:8000
+    depends_on:
+      - backend
