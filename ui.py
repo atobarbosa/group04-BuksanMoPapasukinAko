@@ -1,8 +1,9 @@
 # ui.py — BuksanMoPapasukinAko (Monochrome Beach Redesign)
 import gradio as gr
 import requests
+import os
 
-API_BASE = "http://127.0.0.1:8000"
+API_BASE = os.getenv("API_URL", "http://127.0.0.1:8000")
 
 # ── Palette ────────────────────────────────────────────────────────────────
 # 284b63  deep navy      — panels, borders, structure
@@ -552,4 +553,4 @@ with gr.Blocks(css=CUSTOM_CSS, theme=gr.themes.Base()) as app:
     app.load(fn=fetch_history_html, inputs=None, outputs=history_display)
 
 if __name__ == "__main__":
-    app.launch(server_name="127.0.0.1", server_port=7860)
+    app.launch(server_name="0.0.0.0", server_port=7860)
